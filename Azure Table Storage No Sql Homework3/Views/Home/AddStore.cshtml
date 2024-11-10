@@ -1,0 +1,39 @@
+﻿@model AddStoreViewModel
+
+<div class="container mt-5">
+    <h2>Add Store</h2>
+    <form asp-action="AddStore" method="post">
+        <div class="mb-3">
+            <label asp-for="Store.PartitionKey" class="form-label">Partition Key</label>
+            <input asp-for="Store.PartitionKey" class="form-control" />
+            <span asp-validation-for="Store.PartitionKey" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Store.RowKey" class="form-label">Row Key</label>
+            <input asp-for="Store.RowKey" class="form-control" />
+            <span asp-validation-for="Store.RowKey" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Store.StoreName" class="form-label">Store Name</label>
+            <input asp-for="Store.StoreName" class="form-control" />
+            <span asp-validation-for="Store.StoreName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Store.CountryName" class="form-label">Country Name</label>
+            <input asp-for="Store.CountryName" class="form-control" />
+            <span asp-validation-for="Store.CountryName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Store.CityName" class="form-label">City Name</label>
+            <input asp-for="Store.CityName" class="form-control" />
+            <span asp-validation-for="Store.CityName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Store.Address" class="form-label">Address</label>
+            <textarea asp-for="Store.Address" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Store.Address" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Store</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
